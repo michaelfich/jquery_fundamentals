@@ -35,18 +35,18 @@
 
 // Add a script tag to the bottom.
 // Change the body style so it has a font-family of "Arial, sans-serif".
+var body = document.getElementsByTagName('body')[0];
+body.style.fontFamily = "Arial, sans-serif";
 // Replace each of the spans (nickname, favorites, hometown) with your own information.
+document.getElementById('nickname').innerText = "Sensei";
+document.getElementById('favorites').innerText = "Ruby is the best!";
+document.getElementById('hometown').innerText = "Toronto, ON";
 // Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
+var listItems = document.getElementsByTagName('li');
+for (var i = 0; i < listItems.length; i++) {
+  listItems[i].style.backgroundColor = "red";
+}
 // Create a new img element and set its src attribute to a picture of you. Append that element to the page.
-
-// EXERCISE: The Book List
-
-// Keep track of which books you read and which books you want to read!
-
-// Create a webpage with an h1 of "My Book List".
-// Add a script tag to the bottom of the page, where all your JS will go.
-// Copy the array of books from the previous exercise.
-// Iterate through the array of books. For each book, create a p element with the book title and author and append it to the page.
-// Bonus: Use a ul and li to display the books.
-// Bonus: add a property to each book with the URL of the book cover, and add an img element for each book on the page.
-// Bonus: Change the style of the book depending on whether you have read it or not.
+var img = document.createElement("img");
+img.src = "https://pbs.twimg.com/profile_images/618788721685458948/PhjH41NI_400x400.jpg";
+body.appendChild(img);
